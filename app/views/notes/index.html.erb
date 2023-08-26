@@ -1,14 +1,29 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Notes</h1>
-
-<div id="notes">
-  <% @notes.each do |note| %>
-    <%= render note %>
-    <p>
-      <%= link_to "Show this note", note %>
-    </p>
-  <% end %>
+<div class="d-flex justify-content-between" style="align-items:center;">
+<h1 class="mt-2">Your notes</h1>
+<%= link_to "New note", new_note_path , class: %w(btn-custom) %>
 </div>
 
-<%= link_to "New note", new_note_path%>
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+
+   <%= f.submit %>
+
+<% end %>
+
+<div class="container bootstrap snippets bootdeys">
+<div class="row">
+  <% @notes.each do |note| %>
+  <div class="col-md-4 col-sm-6 content-card">
+    <div class="card-big-shadow">
+      <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+        <div class="content">
+          <%= render note %>
+        </div>
+      </div> <!-- end card -->
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>

@@ -12,9 +12,24 @@
     <%= javascript_include_tag "bootstrap.min.js" %>
     <%= javascript_include_tag "popper.min.js" %>
     <%= javascript_include_tag "bootstrap.bundle.min.js" %>
+    <%= javascript_include_tag "sweetalert2.all.min.js" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%# rails assets:precompile %>
   </head>
 
   <body>
+    <% if notice %>
+      <script>
+        Swal.fire("Success!","<%= notice %>","success");
+      </script>
+    <% end %>
+
+    <% if alert %>
+      <script>
+        Swal.fire("Warning!","<%= alert %>","warning");
+      </script>
+    <% end %>
+
     <%= render 'shared/header' %>
     <div class="container">
       <div class="row">

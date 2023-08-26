@@ -1,12 +1,4 @@
-<div id="<%= dom_id note %>">
-  <p>
-    <strong>Title:</strong>
-    <%= note.title %>
-  </p>
 
-  <p>
-    <strong>Desc:</strong>
-    <%= note.desc %>
-  </p>
-
-</div>
+  <%# <h6 class="category">Best cards</h6> %>
+    <h4 class="title"><%= link_to note.title, note %></h4>
+    <p class="description"><%= note.desc %></p> 

@@ -9,4 +9,4 @@ Rails.application.config.assets.version = "1.0"
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( bootstrap.min.js jquery.min.js popper.min.js bootstrap.bundle.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.js jquery.min.js popper.min.js bootstrap.bundle.min.js sweetalert2.all.min.js )
